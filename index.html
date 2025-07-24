@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Risk Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+        <span id="theme-label">🌞 Light Mode</span>
+    </div>
+
+    <div class="container">
+        <h2>🔍 Diabetes Progression Prediction</h2>
+
+        <div class="card">
+            <form id="predictionForm">
+                <div class="input-group">
+                    <input type="number" step="any" id="age" placeholder="🧑 Age (years)" required>
+                    <input type="number" id="sex" placeholder="⚤ Sex (0: Female, 1: Male)" required>
+                </div>
+                <div class="input-group">
+                    <input type="number" step="any" id="bmi" placeholder="⚖️ BMI (kg/m²)" required>
+                    <input type="number" step="any" id="bp" placeholder="💉 Blood Pressure (mmHg)" required>
+                </div>
+                <div class="input-group">
+                    <input type="number" step="any" id="s1" placeholder="🩸 Total Cholesterol" required>
+                    <input type="number" step="any" id="s2" placeholder="LDL (Bad Cholesterol)" required>
+                </div>
+                <div class="input-group">
+                    <input type="number" step="any" id="s3" placeholder="HDL (Good Cholesterol)" required>
+                    <input type="number" step="any" id="s4" placeholder="TCH / HDL Ratio" required>
+                </div>
+                <div class="input-group">
+                    <input type="number" step="any" id="s5" placeholder="Serum Triglycerides" required>
+                    <input type="number" step="any" id="s6" placeholder="Blood Sugar Level" required>
+                </div>
+
+                <button type="submit">🔮 Predict</button>
+            </form>
+        </div>
+
+        <div id="result-card" class="hidden">
+            <h3>📊 Prediction Result</h3>
+            <p id="result"></p>
+            <p id="suggestions"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
